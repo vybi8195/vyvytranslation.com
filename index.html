@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VY VY Translation — Dịch Thuật & Công Chứng Quốc Tế</title>
+<meta name="description" content="VY VY Translation — chuyên gia dịch thuật công chứng và hợp pháp hóa lãnh sự hai chiều Việt Nam ⇄ quốc tế, hơn 50 ngôn ngữ. Nhận báo giá miễn phí trong 30 phút.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230B2340'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='58' fill='%23C6A15B' text-anchor='middle'%3EV%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   TOKENS
+   ============================================ */
+:root{
+  --ink:#0B2340;
+  --navy-950:#071627;
+  --navy-900:#0B2340;
+  --navy-800:#123356;
+  --blue-700:#14467D;
+  --blue-600:#1B5694;
+  --blue-500:#2E7BC4;
+  --blue-100:#DCEAF8;
+  --mist:#F5F8FC;
+  --white:#FFFFFF;
+  --gold-600:#9C7B41;
+  --gold-500:#B8925A;
+  --gold-400:#D2B27C;
+  --gold-100:#F3E9D8;
+  --slate-700:#3D4A5C;
+  --slate-500:#64758A;
+  --slate-300:#C7D2DE;
+  --slate-100:#E9EFF5;
+
+  --serif:'Playfair Display', 'Georgia', serif;
+  --sans:'Be Vietnam Pro', -apple-system, sans-serif;
+
+  --container:1200px;
+  --radius-sm:10px;
+  --radius-md:18px;
+  --radius-lg:28px;
+  --shadow-sm:0 2px 10px rgba(11,35,64,.06);
+  --shadow-md:0 14px 34px rgba(11,35,64,.10);
+  --shadow-lg:0 26px 60px rgba(11,35,64,.18);
+  --ease:cubic-bezier(.4,0,.2,1);
+}
+
+*,*::before,*::after{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--sans);
+  color:var(--slate-700);
+  background:var(--white);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img,svg{display:block; max-width:100%;}
+a{color:inherit; text-decoration:none;}
+ul{list-style:none;}
+button{font-family:inherit; cursor:pointer; border:none; background:none;}
+input,select,textarea{font-family:inherit; font-size:1rem;}
+h1,h2,h3,h4{font-family:var(--serif); color:var(--ink); line-height:1.18; font-weight:700;}
+
+:focus-visible{outline:2.5px solid var(--blue-500); outline-offset:3px; border-radius:4px;}
+
+.container{max-width:var(--container); margin:0 auto; padding:0 28px;}
+.section{padding:112px 0;}
+@media (max-width:768px){ .section{padding:72px 0;} }
+.bg-mist{background:var(--mist);}
+.bg-navy{background:var(--navy-900); color:var(--slate-300);}
+
+.eyebrow{
+  display:inline-flex; align-items:center; gap:12px;
+  font-size:.78rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--gold-600); margin-bottom:18px;
+}
+.bg-navy .eyebrow{ color:var(--gold-400); }
+.eyebrow::before{ content:''; width:36px; height:2px; background:var(--gold-500); border-radius:2px; }
+
+.section-head{ max-width:640px; margin-bottom:56px; }
+.section-head.center{ margin-left:auto; margin-right:auto; text-align:center; }
+.section-head h2{ font-size:clamp(1.9rem,3.4vw,2.6rem); margin-bottom:16px; }
+.section-head p{ font-size:1.05rem; color:var(--slate-500); }
+.bg-navy .section-head p{ color:var(--slate-300); }
+
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  padding:15px 30px; border-radius:100px; font-weight:600; font-size:.98rem;
+  transition:transform .3s var(--ease), box-shadow .3s var(--ease), background .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease);
+  white-space:nowrap;
+}
+.btn svg{width:18px; height:18px;}
+.btn-primary{ background:linear-gradient(135deg,var(--blue-600),var(--blue-700)); color:var(--white); box-shadow:0 10px 24px rgba(20,70,125,.32); }
+.btn-primary:hover{ transform:translateY(-3px); box-shadow:0 16px 34px rgba(20,70,125,.42); }
+.btn-ghost{ background:transparent; color:var(--white); border:1.5px solid rgba(255,255,255,.4); }
+.btn-ghost:hover{ background:rgba(255,255,255,.1); border-color:rgba(255,255,255,.7); transform:translateY(-3px); }
+.btn-outline{ background:transparent; color:var(--blue-700); border:1.5px solid var(--slate-300); }
+.btn-outline:hover{ border-color:var(--blue-600); background:var(--blue-100); transform:translateY(-3px); }
+.btn-gold{ background:linear-gradient(135deg,var(--gold-400),var(--gold-600)); color:var(--navy-900); box-shadow:0 10px 24px rgba(184,146,90,.35); }
+.btn-gold:hover{ transform:translateY(-3px); box-shadow:0 16px 30px rgba(184,146,90,.45); }
+.btn-block{ width:100%; }
+.btn:disabled{ opacity:.7; cursor:not-allowed; transform:none !important; }
+
+.fade-up{ opacity:0; transform:translateY(28px); transition:opacity .8s var(--ease), transform .8s var(--ease); }
+.fade-up.in-view{ opacity:1; transform:translateY(0); }
+
+/* ============================================
+   HEADER
+   ============================================ */
+.site-header{
+  position:fixed; top:0; left:0; right:0; z-index:1000;
+  padding:22px 0; transition:padding .35s var(--ease), background .35s var(--ease), box-shadow .35s var(--ease);
+}
+.site-header .container{ display:flex; align-items:center; justify-content:space-between; }
+.site-header.scrolled{ padding:13px 0; background:rgba(255,255,255,.92); backdrop-filter:blur(14px); box-shadow:0 4px 24px rgba(11,35,64,.08); }
+
+.logo{ display:flex; align-items:center; gap:12px; }
+.logo-mark{
+  width:42px; height:42px; border-radius:50%; flex-shrink:0;
+  background:radial-gradient(circle at 32% 28%, var(--blue-600), var(--navy-900) 72%);
+  border:1.5px solid var(--gold-500);
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--serif); font-weight:700; font-size:.92rem; letter-spacing:-.02em; color:var(--gold-400);
+}
+.logo-word{ font-family:var(--serif); font-weight:700; font-size:1.28rem; letter-spacing:.02em; color:var(--white); line-height:1.1; }
+.site-header.scrolled .logo-word{ color:var(--ink); }
+.logo-sub{ font-size:.62rem; letter-spacing:.18em; color:var(--gold-400); text-transform:uppercase; display:block; margin-top:1px;}
+
+.nav-links{ display:flex; align-items:center; gap:28px; }
+.nav-links a{
+  font-size:.95rem; font-weight:500; color:rgba(255,255,255,.88); position:relative; padding:4px 0;
+  transition:color .3s var(--ease);
+}
+.site-header.scrolled .nav-links a{ color:var(--slate-700); }
+.nav-links a::after{
+  content:''; position:absolute; left:0; bottom:-2px; width:0; height:2px; background:var(--gold-500);
+  transition:width .3s var(--ease);
+}
+.nav-links a:hover{ color:var(--gold-400); }
+.site-header.scrolled .nav-links a:hover{ color:var(--blue-600); }
+.nav-links a:hover::after{ width:100%; }
+
+.nav-right{ display:flex; align-items:center; gap:22px; }
+.nav-cta{ padding:12px 26px; font-size:.9rem; }
+
+.mobile-toggle{ display:none; flex-direction:column; gap:5px; width:28px; z-index:1100; }
+.mobile-toggle span{ height:2px; background:var(--white); border-radius:2px; transition:all .3s var(--ease); }
+.site-header.scrolled .mobile-toggle span{ background:var(--ink); }
+.mobile-toggle.active span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+.mobile-toggle.active span:nth-child(2){ opacity:0; }
+.mobile-toggle.active span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
+@media (max-width:1040px){
+  .nav-links{
+    position:fixed; top:0; right:0; height:100vh; width:min(78vw,340px);
+    background:var(--navy-900); flex-direction:column; justify-content:center; align-items:flex-start;
+    padding:40px; gap:26px; transform:translateX(100%); transition:transform .4s var(--ease);
+    box-shadow:-10px 0 40px rgba(0,0,0,.2);
+  }
+  .nav-links.active{ transform:translateX(0); }
+  .nav-links a{ color:var(--white) !important; font-size:1.15rem; }
+  .nav-right .nav-cta{ display:none; }
+  .nav-links::after{ content:''; }
+  .mobile-toggle{ display:flex; }
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero{
+  position:relative; background:radial-gradient(ellipse 120% 90% at 18% 0%, var(--blue-700) 0%, var(--navy-900) 46%, var(--navy-950) 100%);
+  padding:172px 0 120px; overflow:hidden;
+}
+.hero::before{
+  content:''; position:absolute; inset:0; opacity:.5;
+  background-image:radial-gradient(rgba(255,255,255,.09) 1px, transparent 1px);
+  background-size:26px 26px; pointer-events:none;
+}
+.hero-grid{ position:relative; z-index:2; display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center; }
+@media (max-width:960px){ .hero-grid{ grid-template-columns:1fr; text-align:center; } }
+
+.hero-copy .eyebrow{ color:var(--gold-400); justify-content:flex-start; }
+@media (max-width:960px){ .hero-copy .eyebrow{ justify-content:center; } }
+.hero-copy h1{
+  font-size:clamp(2.35rem,4.6vw,3.7rem); color:var(--white); font-weight:700; letter-spacing:-.01em;
+  margin-bottom:24px;
+}
+.hero-copy h1 em{ font-style:italic; color:var(--gold-400); }
+.hero-copy p.lead{ font-size:1.12rem; color:rgba(255,255,255,.78); max-width:520px; margin-bottom:38px; }
+@media (max-width:960px){ .hero-copy p.lead{ margin-left:auto; margin-right:auto; } }
+.hero-actions{ display:flex; gap:16px; flex-wrap:wrap; margin-bottom:56px; }
+@media (max-width:960px){ .hero-actions{ justify-content:center; } }
+
+.hero-stats{ display:flex; gap:0; flex-wrap:wrap; }
+@media (max-width:960px){ .hero-stats{ justify-content:center; } }
+.stat{ padding-right:36px; margin-right:36px; border-right:1px solid rgba(255,255,255,.15); }
+.stat:last-child{ border-right:none; margin-right:0; padding-right:0; }
+@media (max-width:520px){ .stat{ padding-right:20px; margin-right:20px; } }
+.stat-number{ font-family:var(--serif); font-size:1.85rem; font-weight:700; color:var(--white); display:block; }
+.stat-label{ font-size:.8rem; color:rgba(255,255,255,.6); margin-top:2px; }
+
+/* Signature: rotating notary seal */
+.hero-visual{ position:relative; display:flex; align-items:center; justify-content:center; }
+.seal-glow{
+  position:absolute; width:380px; height:380px; border-radius:50%;
+  background:radial-gradient(circle, rgba(210,178,124,.28), transparent 68%);
+  animation:pulse-glow 5s ease-in-out infinite;
+}
+@keyframes pulse-glow{ 0%,100%{ transform:scale(1); opacity:.8; } 50%{ transform:scale(1.09); opacity:1; } }
+.seal-wrap{ position:relative; width:330px; height:330px; flex-shrink:0; }
+@media (max-width:520px){ .seal-wrap{ width:270px; height:270px; } .seal-glow{ width:320px; height:320px; } }
+.seal-ring-svg{ position:absolute; inset:0; width:100%; height:100%; animation:spin 46s linear infinite; }
+@keyframes spin{ from{ transform:rotate(0deg); } to{ transform:rotate(360deg); } }
+.ring-text{ font-family:var(--sans); font-size:12.5px; font-weight:600; letter-spacing:2.6px; fill:var(--gold-400); }
+.seal-core{
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  width:186px; height:186px; border-radius:50%;
+  background:radial-gradient(circle at 34% 30%, var(--blue-600), var(--navy-900) 78%);
+  border:2px solid var(--gold-500);
+  box-shadow:0 0 0 6px rgba(210,178,124,.12), inset 0 0 30px rgba(0,0,0,.35), var(--shadow-lg);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+}
+@media (max-width:520px){ .seal-core{ width:150px; height:150px; } }
+.seal-monogram{ font-family:var(--serif); font-size:3.1rem; font-weight:700; color:var(--gold-400); line-height:1; letter-spacing:-.01em; }
+@media (max-width:520px){ .seal-monogram{ font-size:2.4rem; } }
+.seal-core-sub{ font-size:.62rem; letter-spacing:.24em; color:rgba(210,178,124,.75); margin-top:6px; }
+.seal-core-line{ width:26px; height:1px; background:rgba(210,178,124,.5); margin-top:9px; }
+
+/* ============================================
+   LANGUAGE TICKER
+   ============================================ */
+.ticker{ background:var(--white); border-bottom:1px solid var(--slate-100); overflow:hidden; padding:22px 0; }
+.ticker-track{ display:flex; width:max-content; gap:52px; animation:scroll-x 34s linear infinite; }
+.ticker:hover .ticker-track{ animation-play-state:paused; }
+@keyframes scroll-x{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+.ticker-item{ display:flex; align-items:center; gap:10px; font-weight:600; color:var(--slate-500); font-size:.98rem; white-space:nowrap; }
+.ticker-item .flag{ font-size:1.3rem; }
+
+/* ============================================
+   SERVICES
+   ============================================ */
+.services-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:28px; }
+.service-card{
+  background:var(--white); border:1px solid var(--slate-100); border-radius:var(--radius-md);
+  padding:38px 32px; transition:transform .4s var(--ease), box-shadow .4s var(--ease), border-color .4s var(--ease);
+  position:relative; overflow:hidden;
+}
+.service-card::before{
+  content:''; position:absolute; top:0; left:0; width:100%; height:3px;
+  background:linear-gradient(90deg,var(--gold-500),var(--blue-500)); transform:scaleX(0); transform-origin:left;
+  transition:transform .45s var(--ease);
+}
+.service-card:hover{ transform:translateY(-8px); box-shadow:var(--shadow-md); border-color:transparent; }
+.service-card:hover::before{ transform:scaleX(1); }
+.service-icon{
+  width:58px; height:58px; border-radius:16px; background:var(--blue-100); color:var(--blue-700);
+  display:flex; align-items:center; justify-content:center; margin-bottom:22px;
+  transition:background .4s var(--ease), color .4s var(--ease);
+}
+.service-icon svg{ width:28px; height:28px; }
+.service-card:hover .service-icon{ background:var(--navy-900); color:var(--gold-400); }
+.service-card h3{ font-size:1.22rem; margin-bottom:12px; }
+.service-card p{ font-size:.95rem; color:var(--slate-500); margin-bottom:18px; }
+.service-link{ font-size:.88rem; font-weight:700; color:var(--blue-600); display:inline-flex; align-items:center; gap:7px; }
+.service-link svg{ width:15px; height:15px; transition:transform .3s var(--ease); }
+.service-card:hover .service-link svg{ transform:translateX(5px); }
+
+/* ============================================
+   HPHLS DEEP-DIVE (two directional paths)
+   ============================================ */
+.hphls-grid{ display:grid; grid-template-columns:1fr 1fr; gap:32px; }
+@media (max-width:900px){ .hphls-grid{ grid-template-columns:1fr; } }
+.hphls-path{
+  background:var(--white); border:1px solid var(--slate-100); border-radius:var(--radius-lg);
+  padding:42px 38px; transition:transform .4s var(--ease), box-shadow .4s var(--ease);
+}
+.hphls-path:hover{ transform:translateY(-4px); box-shadow:var(--shadow-md); }
+.hphls-path.inbound{ border-top:4px solid var(--blue-600); }
+.hphls-path.outbound{ border-top:4px solid var(--gold-500); }
+.hphls-path-head{ margin-bottom:30px; }
+.hphls-flow{ display:inline-flex; align-items:center; gap:10px; font-size:1.9rem; margin-bottom:18px; }
+.hphls-flow svg{ width:20px; height:20px; color:var(--slate-300); }
+.hphls-path h3{ font-size:1.28rem; margin-bottom:10px; }
+.hphls-path-head p{ font-size:.92rem; color:var(--slate-500); }
+.hphls-steps{ position:relative; }
+.hphls-steps::before{ content:''; position:absolute; top:6px; bottom:6px; left:22px; width:2px; background:var(--slate-100); }
+.hphls-step{ position:relative; display:flex; gap:18px; padding-bottom:24px; }
+.hphls-step:last-child{ padding-bottom:0; }
+.hphls-step-num{
+  width:45px; height:45px; border-radius:50%; flex-shrink:0; position:relative; z-index:1;
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--serif); font-weight:700; font-size:1rem;
+  background:var(--white); border:2px solid var(--slate-200); color:var(--slate-700);
+  transition:transform .3s var(--ease);
+}
+.hphls-step:hover .hphls-step-num{ transform:scale(1.08); }
+.inbound .hphls-step-num{ border-color:var(--blue-500); color:var(--blue-600); }
+.outbound .hphls-step-num{ border-color:var(--gold-500); color:var(--gold-600); }
+.hphls-step h4{ font-family:var(--sans); font-size:.96rem; font-weight:700; color:var(--ink); margin-bottom:5px; }
+.hphls-step p{ font-size:.86rem; color:var(--slate-500); }
+.hphls-countries{ margin-top:26px; padding-top:24px; border-top:1px solid var(--slate-100); font-size:.85rem; color:var(--slate-500); }
+.hphls-countries strong{ color:var(--ink); display:block; margin-bottom:10px; font-size:.76rem; letter-spacing:.06em; text-transform:uppercase; }
+.hphls-flags{ font-size:1.25rem; letter-spacing:5px; }
+.hphls-note{ text-align:center; font-size:.86rem; color:var(--slate-500); margin-top:36px; font-style:italic; }
+
+/* ============================================
+   LANGUAGES
+   ============================================ */
+.languages-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; }
+.lang-card{
+  background:var(--white); border:1px solid var(--slate-100); border-radius:var(--radius-sm);
+  padding:28px 22px; text-align:center; transition:transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease);
+}
+.lang-card:hover{ transform:translateY(-6px) scale(1.02); box-shadow:var(--shadow-md); border-color:var(--blue-100); }
+.lang-flag-badge{
+  width:56px; height:56px; border-radius:50%; margin:0 auto 14px; background:var(--mist);
+  display:flex; align-items:center; justify-content:center; font-size:1.7rem; border:1px solid var(--slate-100);
+}
+.lang-card h4{ font-family:var(--sans); font-size:.98rem; font-weight:700; color:var(--ink); margin-bottom:3px; }
+.lang-card span{ font-size:.8rem; color:var(--slate-500); }
+.lang-card p{ font-size:.83rem; color:var(--slate-500); margin-top:12px; padding-top:12px; border-top:1px dashed var(--slate-100); line-height:1.55; }
+.languages-more{ text-align:center; margin-top:40px; color:var(--slate-500); font-size:.98rem; }
+.languages-more strong{ color:var(--blue-600); }
+
+/* ============================================
+   PROCESS
+   ============================================ */
+.process-track{ display:flex; gap:28px; position:relative; }
+.process-track::before{
+  content:''; position:absolute; top:34px; left:70px; right:70px; height:2px;
+  background:repeating-linear-gradient(90deg, var(--slate-300) 0 10px, transparent 10px 20px);
+}
+@media (max-width:880px){ .process-track{ flex-direction:column; gap:36px; } .process-track::before{ display:none; } }
+.process-step{ flex:1; text-align:center; position:relative; z-index:1; }
+@media (max-width:880px){ .process-step{ text-align:left; display:flex; gap:20px; align-items:flex-start; } }
+.step-num{
+  width:68px; height:68px; border-radius:50%; background:var(--white); border:2px solid var(--slate-300);
+  display:flex; align-items:center; justify-content:center; margin:0 auto 24px; flex-shrink:0;
+  font-family:var(--serif); font-size:1.5rem; font-weight:700; color:var(--gold-600);
+  transition:border-color .4s var(--ease), transform .4s var(--ease);
+}
+.process-step:hover .step-num{ border-color:var(--gold-500); transform:scale(1.08); }
+@media (max-width:880px){ .step-num{ margin:0; } }
+.process-step h3{ font-size:1.1rem; margin-bottom:10px; }
+.process-step p{ font-size:.92rem; color:var(--slate-500); max-width:230px; margin:0 auto; }
+@media (max-width:880px){ .process-step p{ margin:0; max-width:none; } }
+
+/* ============================================
+   WHY US (navy band)
+   ============================================ */
+.features-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:34px; }
+.feature-item{ display:flex; gap:18px; }
+.feature-icon{
+  width:52px; height:52px; border-radius:14px; background:rgba(210,178,124,.12); border:1px solid rgba(210,178,124,.3);
+  color:var(--gold-400); display:flex; align-items:center; justify-content:center; flex-shrink:0;
+}
+.feature-icon svg{ width:24px; height:24px; }
+.feature-item h4{ font-family:var(--sans); font-size:1.04rem; font-weight:700; color:var(--white); margin-bottom:7px; }
+.feature-item p{ font-size:.92rem; color:rgba(255,255,255,.62); }
+
+/* ============================================
+   TESTIMONIALS
+   ============================================ */
+.testimonials-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:28px; }
+.testimonial-card{
+  background:var(--mist); border-radius:var(--radius-md); padding:34px 30px;
+  transition:transform .4s var(--ease), box-shadow .4s var(--ease); position:relative;
+}
+.testimonial-card:hover{ transform:translateY(-6px); box-shadow:var(--shadow-md); }
+.stars{ display:flex; gap:3px; color:var(--gold-500); margin-bottom:16px; }
+.stars svg{ width:16px; height:16px; }
+.testimonial-card p{ font-size:.98rem; color:var(--slate-700); margin-bottom:22px; font-style:italic; }
+.t-author{ display:flex; align-items:center; gap:12px; }
+.t-avatar{
+  width:44px; height:44px; border-radius:50%; background:linear-gradient(135deg,var(--blue-600),var(--navy-900));
+  color:var(--gold-400); display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-weight:700;
+}
+.t-author strong{ display:block; font-size:.92rem; color:var(--ink); }
+.t-author span{ font-size:.8rem; color:var(--slate-500); }
+
+/* ============================================
+   QUOTE FORM
+   ============================================ */
+.quote-card{
+  display:grid; grid-template-columns:1fr 1.35fr; background:var(--white); border-radius:var(--radius-lg);
+  overflow:hidden; box-shadow:var(--shadow-lg);
+}
+@media (max-width:900px){ .quote-card{ grid-template-columns:1fr; } }
+.quote-info{
+  background:radial-gradient(ellipse 140% 100% at 100% 0%, var(--blue-700), var(--navy-900) 70%);
+  color:var(--white); padding:52px 44px; position:relative; overflow:hidden;
+}
+.quote-info::before{
+  content:''; position:absolute; inset:0; opacity:.5;
+  background-image:radial-gradient(rgba(255,255,255,.08) 1px, transparent 1px); background-size:22px 22px;
+}
+.quote-info > *{ position:relative; z-index:1; }
+.quote-info h3{ color:var(--white); font-size:1.6rem; margin-bottom:14px; }
+.quote-info p{ color:rgba(255,255,255,.72); font-size:.96rem; margin-bottom:30px; }
+.quote-benefits{ display:flex; flex-direction:column; gap:14px; margin-bottom:40px; }
+.quote-benefits li{ display:flex; align-items:center; gap:12px; font-size:.92rem; color:rgba(255,255,255,.88); }
+.quote-benefits svg{ width:19px; height:19px; color:var(--gold-400); flex-shrink:0; }
+.quote-contact{ display:flex; flex-direction:column; gap:16px; border-top:1px solid rgba(255,255,255,.15); padding-top:28px; }
+.quote-contact-item{ display:flex; align-items:center; gap:12px; font-size:.9rem; color:rgba(255,255,255,.82); }
+.quote-contact-item svg{ width:18px; height:18px; color:var(--gold-400); flex-shrink:0; }
+
+.quote-form-wrap{ padding:52px 44px; }
+.quote-form-wrap h3{ font-size:1.4rem; margin-bottom:6px; }
+.quote-form-wrap > p{ color:var(--slate-500); font-size:.92rem; margin-bottom:30px; }
+.form-row{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+@media (max-width:560px){ .form-row{ grid-template-columns:1fr; } }
+.form-group{ margin-bottom:20px; }
+.form-group label{ display:block; font-size:.84rem; font-weight:600; color:var(--ink); margin-bottom:8px; }
+.form-group input, .form-group select, .form-group textarea{
+  width:100%; padding:13px 15px; border:1.5px solid var(--slate-100); border-radius:10px;
+  background:var(--mist); color:var(--slate-700); transition:border-color .3s var(--ease), background .3s var(--ease), box-shadow .3s var(--ease);
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus{
+  outline:none; border-color:var(--blue-500); background:var(--white); box-shadow:0 0 0 4px var(--blue-100);
+}
+.form-group textarea{ resize:vertical; min-height:90px; }
+.btn-submit{ position:relative; }
+.btn-submit .btn-text{ display:inline-flex; align-items:center; gap:10px; transition:opacity .2s var(--ease); }
+.btn-submit .btn-spinner{
+  display:none; width:18px; height:18px; border-radius:50%; border:2.5px solid rgba(255,255,255,.4);
+  border-top-color:var(--white); animation:spin 0.7s linear infinite;
+}
+.btn-submit.loading .btn-text{ opacity:0; }
+.btn-submit.loading .btn-spinner{ display:block; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); }
+
+.form-success{ display:none; text-align:center; padding:30px 10px; }
+.form-success.active{ display:block; }
+.form-success-icon{
+  width:76px; height:76px; border-radius:50%; background:var(--blue-100); color:var(--blue-600);
+  display:flex; align-items:center; justify-content:center; margin:0 auto 22px;
+}
+.form-success-icon svg{ width:36px; height:36px; }
+.form-success h3{ margin-bottom:10px; }
+.form-success p{ color:var(--slate-500); font-size:.95rem; margin-bottom:6px; }
+.form-success .code{ display:inline-block; margin:14px 0 26px; padding:8px 18px; background:var(--mist); border-radius:100px; font-weight:700; color:var(--blue-700); letter-spacing:.05em; }
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer{ background:var(--navy-950); color:rgba(255,255,255,.6); padding-top:88px; }
+.footer-grid{ display:grid; grid-template-columns:1.6fr 1fr 1fr 1.3fr; gap:40px; padding-bottom:56px; border-bottom:1px solid rgba(255,255,255,.08); }
+@media (max-width:900px){ .footer-grid{ grid-template-columns:1fr 1fr; } }
+@media (max-width:560px){ .footer-grid{ grid-template-columns:1fr; } }
+.footer-brand .logo-word{ color:var(--white); }
+.footer-brand p{ font-size:.9rem; margin:18px 0 24px; max-width:280px; line-height:1.7; }
+.footer-social{ display:flex; gap:12px; }
+.footer-social a{
+  width:38px; height:38px; border-radius:50%; border:1px solid rgba(255,255,255,.18);
+  display:flex; align-items:center; justify-content:center; transition:background .3s var(--ease), border-color .3s var(--ease), transform .3s var(--ease);
+}
+.footer-social a:hover{ background:var(--gold-500); border-color:var(--gold-500); transform:translateY(-3px); color:var(--navy-900); }
+.footer-social svg{ width:16px; height:16px; }
+.footer-col h5{ color:var(--white); font-family:var(--sans); font-size:.95rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase; margin-bottom:22px; }
+.footer-col ul{ display:flex; flex-direction:column; gap:13px; }
+.footer-col a{ font-size:.9rem; transition:color .3s var(--ease), padding-left .3s var(--ease); }
+.footer-col a:hover{ color:var(--gold-400); padding-left:4px; }
+.footer-contact-item{ display:flex; gap:12px; font-size:.9rem; margin-bottom:16px; align-items:flex-start; }
+.footer-contact-item svg{ width:17px; height:17px; color:var(--gold-400); flex-shrink:0; margin-top:2px; }
+.footer-bottom{ padding:26px 0; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; font-size:.82rem; }
+.footer-bottom-links{ display:flex; gap:22px; }
+.footer-bottom-links a:hover{ color:var(--gold-400); }
+
+/* ============================================
+   FLOATING ACTIONS
+   ============================================ */
+.floating-actions{ position:fixed; right:26px; bottom:26px; z-index:900; display:flex; flex-direction:column; gap:14px; align-items:center; }
+.fab{
+  width:54px; height:54px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+  box-shadow:var(--shadow-md); transition:transform .3s var(--ease), box-shadow .3s var(--ease), opacity .3s var(--ease), visibility .3s var(--ease);
+}
+.fab svg{ width:22px; height:22px; }
+.fab-call{ background:linear-gradient(135deg,var(--gold-400),var(--gold-600)); color:var(--navy-900); position:relative; }
+.fab-call::before{
+  content:''; position:absolute; inset:-6px; border-radius:50%; border:2px solid var(--gold-500); opacity:.6;
+  animation:ring-pulse 2.2s ease-out infinite;
+}
+@keyframes ring-pulse{ 0%{ transform:scale(.9); opacity:.7; } 100%{ transform:scale(1.35); opacity:0; } }
+.fab-top{ background:var(--white); color:var(--blue-700); border:1px solid var(--slate-100); opacity:0; visibility:hidden; transform:translateY(10px); }
+.fab-top.visible{ opacity:1; visibility:visible; transform:translateY(0); }
+.fab:hover{ transform:translateY(-4px) scale(1.06); }
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion:reduce){
+  *{ animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; scroll-behavior:auto !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- ======================= HEADER ======================= -->
+<header class="site-header" id="siteHeader">
+  <div class="container">
+    <a href="#top" class="logo">
+      <span class="logo-mark">VY</span>
+      <span>
+        <span class="logo-word">VY VY</span>
+        <span class="logo-sub">Translation Bureau</span>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#services">Dịch Vụ</a>
+      <a href="#hphls">HPHLS</a>
+      <a href="#languages">Ngôn Ngữ</a>
+      <a href="#process">Quy Trình</a>
+      <a href="#testimonials">Đánh Giá</a>
+      <a href="#quote">Liên Hệ</a>
+    </nav>
+    <div class="nav-right">
+      <a href="#quote" class="btn btn-primary nav-cta">Nhận Báo Giá</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Mở menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ======================= HERO ======================= -->
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div class="hero-copy fade-up in-view">
+      <span class="eyebrow">Dịch Thuật · Công Chứng · Hợp Pháp Hóa Lãnh Sự</span>
+      <h1>Chuẩn Xác Từng Con Chữ,<br>Vững Tin Từng <em>Con Dấu</em></h1>
+      <p class="lead">Hơn 15 năm đồng hành cùng cá nhân và doanh nghiệp trong dịch thuật công chứng, hợp pháp hóa lãnh sự và biên phiên dịch chuyên nghiệp — chính xác, bảo mật và luôn đúng hẹn.</p>
+      <div class="hero-actions">
+        <a href="#quote" class="btn btn-gold">
+          Nhận Báo Giá Miễn Phí
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#services" class="btn btn-ghost">Xem Dịch Vụ</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-number" data-target="15" data-suffix="+">0</span><span class="stat-label">Năm kinh nghiệm</span></div>
+        <div class="stat"><span class="stat-number" data-target="50" data-suffix="+">0</span><span class="stat-label">Ngôn ngữ dịch thuật</span></div>
+        <div class="stat"><span class="stat-number" data-target="25000" data-suffix="+">0</span><span class="stat-label">Tài liệu đã dịch</span></div>
+        <div class="stat"><span class="stat-number" data-target="98" data-suffix="%">0</span><span class="stat-label">Khách hàng hài lòng</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual fade-up in-view">
+      <div class="seal-glow"></div>
+      <div class="seal-wrap">
+        <svg class="seal-ring-svg" viewBox="0 0 320 320" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <defs>
+            <path id="ringPath" d="M160,160 m-140,0 a140,140 0 1,1 280,0 a140,140 0 1,1 -280,0"></path>
+          </defs>
+          <text class="ring-text">
+            <textPath href="#ringPath" xlink:href="#ringPath" startOffset="0%">ENGLISH  •  中文  •  日本語  •  한국어  •  FRANÇAIS  •  DEUTSCH  •  ITALIANO  •  ESPAÑOL  •  ไทย  •  РУССКИЙ  •  </textPath>
+          </text>
+        </svg>
+        <div class="seal-core">
+          <span class="seal-monogram">VY</span>
+          <span class="seal-core-line"></span>
+          <span class="seal-core-sub">EST. 2011</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= TICKER ======================= -->
+<div class="ticker">
+  <div class="ticker-track" id="tickerTrack">
+    <!-- populated by JS (duplicated for seamless loop) -->
+  </div>
+</div>
+
+<!-- ======================= SERVICES ======================= -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head center fade-up">
+      <span class="eyebrow" style="justify-content:center;">Dịch Vụ Của Chúng Tôi</span>
+      <h2>Giải Pháp Dịch Thuật Toàn Diện</h2>
+      <p>Từ giấy tờ cá nhân đến hồ sơ pháp lý doanh nghiệp, chúng tôi đồng hành cùng quý khách ở mọi bước của hành trình chuyển ngữ.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v4h4"/><path d="M9 13.2l1.8 1.8L15 10.8"/></svg>
+        </div>
+        <h3>Dịch Thuật Công Chứng</h3>
+        <p>Đội ngũ biên dịch viên được đào tạo chuyên sâu, thành thạo thuật ngữ pháp lý ở hơn 50 ngôn ngữ. Mỗi bản dịch hộ chiếu, bằng cấp, học bạ, giấy khai sinh, hợp đồng... đều được đối chiếu hai lớp trước khi công chứng, đảm bảo chính xác tuyệt đối và có giá trị sử dụng tại mọi cơ quan, tổ chức trong nước.</p>
+        <a href="#quote" class="service-link">Tìm hiểu thêm <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+      </div>
+
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.2"/><path d="M9 13.6L7 21l5-2.5L17 21l-2-7.4"/><path d="M9.6 9l1.7 1.7L14.8 7"/></svg>
+        </div>
+        <h3>Hợp Pháp Hóa Lãnh Sự</h3>
+        <p>Chuyên xử lý hồ sơ theo hai chiều: hợp pháp hóa giấy tờ nước ngoài để dùng tại Việt Nam, và hợp pháp hóa giấy tờ Việt Nam để dùng tại hơn 40 quốc gia. Nắm rõ quy định riêng của từng Đại sứ quán, Lãnh sự quán, giúp rút ngắn tối đa thời gian xử lý hồ sơ.</p>
+        <a href="#hphls" class="service-link">Xem quy trình chi tiết <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+      </div>
+
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H12v18H6.5A2.5 2.5 0 0 1 4 18.5v-13z"/><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H12v18h5.5a2.5 2.5 0 0 0 2.5-2.5v-13z"/></svg>
+        </div>
+        <h3>Dịch Thuật Chuyên Ngành</h3>
+        <p>Tài liệu kỹ thuật, y khoa, tài chính, pháp lý được chuyển ngữ bởi biên dịch viên có chuyên môn sâu.</p>
+        <a href="#quote" class="service-link">Tìm hiểu thêm <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+      </div>
+
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 13v-1.5a7.5 7.5 0 0 1 15 0V13"/><rect x="3" y="13" width="4" height="6.5" rx="1.4"/><rect x="17" y="13" width="4" height="6.5" rx="1.4"/><path d="M20 19.5v.7a2 2 0 0 1-2 2h-3"/></svg>
+        </div>
+        <h3>Phiên Dịch Hội Nghị</h3>
+        <p>Phiên dịch song song và phiên dịch đuổi cho hội thảo, đàm phán, sự kiện quốc tế với thiết bị chuyên dụng.</p>
+        <a href="#quote" class="service-link">Tìm hiểu thêm <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+      </div>
+
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7.2" width="18" height="12.3" rx="2"/><path d="M8 7.2V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1.2"/><path d="M3 12.3h18"/></svg>
+        </div>
+        <h3>Dịch Thuật Doanh Nghiệp</h3>
+        <p>Giải pháp toàn diện cho hồ sơ thầu, báo cáo tài chính, tài liệu marketing của doanh nghiệp.</p>
+        <a href="#quote" class="service-link">Tìm hiểu thêm <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+      </div>
+
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="15" rx="2"/><path d="M9.5 9l5.5 3-5.5 3V9z" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <h3>Bản Địa Hóa Đa Phương Tiện</h3>
+        <p>Dịch phụ đề, thuyết minh, bản địa hóa website và ứng dụng phù hợp văn hóa từng thị trường.</p>
+        <a href="#quote" class="service-link">Tìm hiểu thêm <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= HPHLS DEEP-DIVE ======================= -->
+<section class="section bg-mist" id="hphls">
+  <div class="container">
+    <div class="section-head center fade-up">
+      <span class="eyebrow" style="justify-content:center;">Chuyên Sâu Hợp Pháp Hóa Lãnh Sự</span>
+      <h2>Quy Trình HPHLS — Trọn Vẹn Hai Chiều Hồ Sơ</h2>
+      <p>Dù hồ sơ của quý khách xuất phát từ quốc gia nào hay cần sử dụng ở đâu, VY VY đồng hành trọn vẹn từ bước đầu tiên đến khi hồ sơ được công nhận hợp pháp.</p>
+    </div>
+
+    <div class="hphls-grid">
+      <!-- INBOUND: foreign documents -> used in Vietnam -->
+      <div class="hphls-path inbound fade-up">
+        <div class="hphls-path-head">
+          <div class="hphls-flow" aria-hidden="true">🌍<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>🇻🇳</div>
+          <h3>Hồ Sơ Nước Ngoài Về Việt Nam</h3>
+          <p>Hợp pháp hóa giấy khai sinh, giấy kết hôn, bằng cấp, lý lịch tư pháp, giấy tờ doanh nghiệp... được cấp ở nước ngoài, để có giá trị pháp lý và sử dụng tại các cơ quan Việt Nam.</p>
+        </div>
+        <div class="hphls-steps">
+          <div class="hphls-step">
+            <div class="hphls-step-num">01</div>
+            <div>
+              <h4>Tiếp Nhận & Kiểm Tra Hồ Sơ Gốc</h4>
+              <p>Rà soát tính hợp lệ, thời hạn và yêu cầu riêng của từng loại giấy tờ theo quy định nước sở tại.</p>
+            </div>
+          </div>
+          <div class="hphls-step">
+            <div class="hphls-step-num">02</div>
+            <div>
+              <h4>Chứng Nhận Tại Cơ Quan Sở Tại</h4>
+              <p>Xác nhận con dấu, chữ ký của cơ quan cấp văn bản tại Bộ Ngoại giao hoặc cơ quan tương đương của nước đó.</p>
+            </div>
+          </div>
+          <div class="hphls-step">
+            <div class="hphls-step-num">03</div>
+            <div>
+              <h4>Hợp Pháp Hóa Tại Cơ Quan Đại Diện Việt Nam</h4>
+              <p>Chứng nhận con dấu, chữ ký của cơ quan ngoại giao nước sở tại tại Đại sứ quán hoặc Lãnh sự quán Việt Nam.</p>
+            </div>
+          </div>
+          <div class="hphls-step">
+            <div class="hphls-step-num">04</div>
+            <div>
+              <h4>Dịch Thuật Công Chứng Sang Tiếng Việt</h4>
+              <p>Chuyển ngữ chính xác, đúng thuật ngữ pháp lý, công chứng theo đúng quy định pháp luật Việt Nam.</p>
+            </div>
+          </div>
+          <div class="hphls-step">
+            <div class="hphls-step-num">05</div>
+            <div>
+              <h4>Bàn Giao & Hướng Dẫn Sử Dụng</h4>
+              <p>Hồ sơ hoàn chỉnh, sẵn sàng nộp tại cơ quan nhà nước, trường học hoặc tổ chức tại Việt Nam.</p>
+            </div>
+          </div>
+        </div>
+        <div class="hphls-countries">
+          <strong>Thường xử lý hồ sơ từ</strong>
+          <span class="hphls-flags">🇺🇸 🇯🇵 🇰🇷 🇫🇷 🇩🇪 🇦🇺 🇨🇳 🇷🇺</span> và hơn 40 quốc gia khác.
+        </div>
+      </div>
+
+      <!-- OUTBOUND: Vietnamese documents -> used abroad -->
+      <div class="hphls-path outbound fade-up">
+        <div class="hphls-path-head">
+          <div class="hphls-flow" aria-hidden="true">🇻🇳<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>🌍</div>
+          <h3>Hồ Sơ Việt Nam Ra Nước Ngoài</h3>
+          <p>Hợp pháp hóa giấy khai sinh, giấy tờ hộ tịch, bằng cấp, giấy tờ doanh nghiệp, giấy ủy quyền... của Việt Nam để được công nhận và sử dụng hợp pháp tại quốc gia khác.</p>
+        </div>
+        <div class="hphls-steps">
+          <div class="hphls-step">
+            <div class="hphls-step-num">01</div>
+            <div>
+              <h4>Dịch Thuật Công Chứng</h4>
+              <p>Chuyển ngữ hồ sơ sang ngôn ngữ đích, công chứng bởi cơ quan có thẩm quyền tại Việt Nam.</p>
+            </div>
+          </div>
+          <div class="hphls-step">
+            <div class="hphls-step-num">02</div>
+            <div>
+              <h4>Chứng Nhận Tại Cục Lãnh Sự / Sở Ngoại Vụ</h4>
+              <p>Xác nhận con dấu, chữ ký trên bản gốc và bản dịch tại cơ quan ngoại giao Việt Nam.</p>
+            </div>
+          </div>
+          <div class="hphls-step">
+            <div class="hphls-step-num">03</div>
+            <div>
+              <h4>Hợp Pháp Hóa Tại Đại Sứ Quán Nước Sở Tại</h4>
+              <p>Chứng nhận tại cơ quan đại diện ngoại giao của quốc gia sẽ sử dụng hồ sơ, đặt tại Việt Nam.</p>
+            </div>
+          </div>
+          <div class="hphls-step">
+            <div class="hphls-step-num">04</div>
+            <div>
+              <h4>Kiểm Tra & Hoàn Thiện Hồ Sơ</h4>
+              <p>Rà soát toàn bộ hồ sơ, đảm bảo đầy đủ dấu, chữ ký theo đúng yêu cầu của nước tiếp nhận.</p>
+            </div>
+          </div>
+          <div class="hphls-step">
+            <div class="hphls-step-num">05</div>
+            <div>
+              <h4>Bàn Giao Hoặc Gửi Chuyển Phát Quốc Tế</h4>
+              <p>Giao hồ sơ trực tiếp hoặc chuyển phát nhanh quốc tế đến địa chỉ khách hàng yêu cầu.</p>
+            </div>
+          </div>
+        </div>
+        <div class="hphls-countries">
+          <strong>Thường xử lý hồ sơ đến</strong>
+          <span class="hphls-flags">🇺🇸 🇯🇵 🇰🇷 🇫🇷 🇩🇪 🇦🇺 🇨🇦 🇬🇧</span> và hơn 40 quốc gia khác.
+        </div>
+      </div>
+    </div>
+
+    <p class="hphls-note fade-up">* Quy trình thực tế có thể thay đổi tùy theo từng quốc gia và loại giấy tờ cụ thể — đội ngũ VY VY sẽ tư vấn chi tiết cho từng trường hợp.</p>
+  </div>
+</section>
+
+<!-- ======================= LANGUAGES ======================= -->
+<section class="section" id="languages">
+  <div class="container">
+    <div class="section-head center fade-up">
+      <span class="eyebrow" style="justify-content:center;">Ngôn Ngữ Dịch Thuật</span>
+      <h2>Hơn 50 Ngôn Ngữ Trên Toàn Thế Giới</h2>
+      <p>Đội ngũ biên dịch viên bản ngữ và song ngữ giúp thông điệp của quý khách giữ trọn sắc thái ở bất kỳ ngôn ngữ nào.</p>
+    </div>
+
+    <div class="languages-grid" id="languagesGrid"></div>
+
+    <p class="languages-more fade-up">Không tìm thấy ngôn ngữ cần dịch? <strong>Liên hệ với chúng tôi</strong> — chúng tôi hỗ trợ hơn 50 ngôn ngữ và phương ngữ khác.</p>
+  </div>
+</section>
+
+<!-- ======================= PROCESS ======================= -->
+<section class="section bg-mist" id="process">
+  <div class="container">
+    <div class="section-head center fade-up">
+      <span class="eyebrow" style="justify-content:center;">Quy Trình Làm Việc</span>
+      <h2>Đơn Giản Trong 4 Bước</h2>
+      <p>Quy trình rõ ràng, minh bạch giúp quý khách theo dõi tài liệu của mình từ lúc gửi đến khi nhận bản dịch hoàn chỉnh.</p>
+    </div>
+
+    <div class="process-track">
+      <div class="process-step fade-up">
+        <div class="step-num">01</div>
+        <div>
+          <h3>Gửi Tài Liệu</h3>
+          <p>Gửi ảnh chụp hoặc file tài liệu cần dịch qua email, Zalo hoặc trực tiếp tại văn phòng.</p>
+        </div>
+      </div>
+      <div class="process-step fade-up">
+        <div class="step-num">02</div>
+        <div>
+          <h3>Nhận Báo Giá</h3>
+          <p>Nhận báo giá chi tiết và thời gian hoàn thành dự kiến chỉ trong vòng 30 phút.</p>
+        </div>
+      </div>
+      <div class="process-step fade-up">
+        <div class="step-num">03</div>
+        <div>
+          <h3>Xác Nhận & Thanh Toán</h3>
+          <p>Xác nhận đơn hàng và thanh toán an toàn với nhiều hình thức linh hoạt.</p>
+        </div>
+      </div>
+      <div class="process-step fade-up">
+        <div class="step-num">04</div>
+        <div>
+          <h3>Nhận Bản Dịch</h3>
+          <p>Nhận bản dịch hoàn chỉnh đúng hẹn — giao tận nơi hoặc nhận trực tiếp tại văn phòng.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= WHY US ======================= -->
+<section class="section bg-navy">
+  <div class="container">
+    <div class="section-head center fade-up">
+      <span class="eyebrow" style="justify-content:center;">Vì Sao Chọn Chúng Tôi</span>
+      <h2 style="color:#fff;">Cam Kết Chất Lượng Ở Từng Bản Dịch</h2>
+      <p>Sự chính xác của con chữ và giá trị pháp lý của con dấu — hai yếu tố chúng tôi không bao giờ thỏa hiệp.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-item fade-up">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5.3"/><path d="M8.4 12.6L7 21l5-2.5L17 21l-1.4-8.4"/></svg></div>
+        <div><h4>Đội Ngũ Chứng Chỉ</h4><p>Biên dịch viên tốt nghiệp chuyên ngành ngôn ngữ, giàu kinh nghiệm thực tế.</p></div>
+      </div>
+      <div class="feature-item fade-up">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div><h4>Bảo Mật Tuyệt Đối</h4><p>Cam kết bảo mật thông tin và nội dung tài liệu của khách hàng ở mức cao nhất.</p></div>
+      </div>
+      <div class="feature-item fade-up">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+        <div><h4>Đúng Hẹn Cam Kết</h4><p>Giao bản dịch đúng thời gian đã hẹn, hỗ trợ dịch nhanh trong ngày khi cần.</p></div>
+      </div>
+      <div class="feature-item fade-up">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 3H20v7.5L11 20l-8-8L12.5 3z"/><circle cx="16" cy="7" r="1.3" fill="currentColor" stroke="none"/></svg></div>
+        <div><h4>Giá Cả Minh Bạch</h4><p>Báo giá rõ ràng ngay từ đầu, không phát sinh chi phí trong suốt quá trình.</p></div>
+      </div>
+      <div class="feature-item fade-up">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.8 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.8-3.8-9s1.3-6.4 3.8-9z"/></svg></div>
+        <div><h4>Pháp Lý Quốc Tế</h4><p>Bản dịch được công nhận rộng rãi bởi các cơ quan, tổ chức trong và ngoài nước.</p></div>
+      </div>
+      <div class="feature-item fade-up">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H8l-4 4V5z"/></svg></div>
+        <div><h4>Hỗ Trợ 24/7</h4><p>Đội ngũ tư vấn sẵn sàng hỗ trợ khách hàng mọi lúc, qua điện thoại và Zalo.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= TESTIMONIALS ======================= -->
+<section class="section" id="testimonials">
+  <div class="container">
+    <div class="section-head center fade-up">
+      <span class="eyebrow" style="justify-content:center;">Khách Hàng Nói Gì</span>
+      <h2>Được Tin Tưởng Bởi Hàng Ngàn Khách Hàng</h2>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-up">
+        <div class="stars">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.6 6.1 20.5l1.2-6.5-4.8-4.6 6.6-.9L12 2.5z"/></svg>
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.6 6.1 20.5l1.2-6.5-4.8-4.6 6.6-.9L12 2.5z"/></svg>
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.6 6.1 20.5l1.2-6.5-4.8-4.6 6.6-.9L12 2.5z"/></svg>
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.6 6.1 20.5l1.2-6.5-4.8-4.6 6.6-.9L12 2.5z"/></svg>
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.6 6.1 20.5l1.2-6.5-4.8-4.6 6.6-.9L12 2.5z"/></svg>
+        </div>
+        <p>"Dịch vụ chuyên nghiệp, hồ sơ công chứng của tôi được xử lý nhanh chóng và chính xác. Rất hài lòng với thái độ phục vụ."</p>
+        <div class="t-author">
+          <div class="t-avatar">L</div>
+          <div><strong>Nguyễn Thị Lan</strong><span>Khách hàng cá nhân</span></div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-up">
+        <div class="stars">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.6 6.1 20.5l1.2-6.5-4.8-4.6 6.6-.9L12 2.5z"/></svg>
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.6 6.1 20.5l1.2-6.5-4.8-4.6 6.6-.9L12 2.5z"/></svg>
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.6 6.1 20.5l1.2-6.5-4.8-4.6 6.6-.9L12 2.5z"/></svg>
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.6 6.1 20.5l1.2-6.5-4.8-4.6 6.6-.9L12 2.5z"/></svg>
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.6 6.1 20.5l1.2-6.5-4.8-4.6 6.6-.9L12 2.5z"/></svg>
+        </div>
+        <p>"Đội ngũ hỗ trợ nhiệt tình, hồ sơ hợp pháp hóa lãnh sự hoàn thành đúng hẹn dù thời gian khá gấp rút."</p>
+        <div class="t-author">
+          <div class="t-avatar">M</div>
+          <div><strong>Trần Văn Minh</strong><span>Giám đốc Công ty XNK</span></div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-up">
+        <div class="stars">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.6 6.1 20.5l1.2-6.5-4.8-4.6 6.6-.9L12 2.5z"/></svg>
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.6 6.1 20.5l1.2-6.5-4.8-4.6 6.6-.9L12 2.5z"/></svg>
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.6 6.1 20.5l1.2-6.5-4.8-4.6 6.6-.9L12 2.5z"/></svg>
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.6 6.1 20.5l1.2-6.5-4.8-4.6 6.6-.9L12 2.5z"/></svg>
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.6 6.1 20.5l1.2-6.5-4.8-4.6 6.6-.9L12 2.5z"/></svg>
+        </div>
+        <p>"Chất lượng bản dịch chuyên ngành kỹ thuật rất tốt, thuật ngữ chính xác. Sẽ tiếp tục hợp tác lâu dài."</p>
+        <div class="t-author">
+          <div class="t-avatar">A</div>
+          <div><strong>Lê Hoàng Anh</strong><span>Trưởng phòng Kỹ thuật</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= QUOTE FORM ======================= -->
+<section class="section bg-mist" id="quote">
+  <div class="container">
+    <div class="section-head center fade-up">
+      <span class="eyebrow" style="justify-content:center;">Đặt Lịch & Báo Giá</span>
+      <h2>Nhận Báo Giá Trong 30 Phút</h2>
+      <p>Điền thông tin bên dưới — đội ngũ tư vấn sẽ liên hệ và gửi báo giá chi tiết trong thời gian sớm nhất.</p>
+    </div>
+
+    <div class="quote-card fade-up">
+      <div class="quote-info">
+        <h3>Vì Sao Nên Đặt Lịch Với Chúng Tôi?</h3>
+        <p>Chỉ mất 2 phút để gửi yêu cầu — chúng tôi lo phần còn lại, từ báo giá đến bàn giao bản dịch đúng hẹn.</p>
+        <ul class="quote-benefits">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg> Báo giá miễn phí, không ràng buộc</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg> Tư vấn tận tình theo từng hồ sơ</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg> Bảo mật thông tin tuyệt đối</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg> Phản hồi nhanh trong 30 phút</li>
+        </ul>
+        <div class="quote-contact">
+          <div class="quote-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.2c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2 2z"/></svg>
+            0911723887 &nbsp;·&nbsp; 090 123 4567
+          </div>
+          <div class="quote-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6.5l9 6.5 9-6.5"/></svg>
+            nguyenthanhvy81@gmail.com
+          </div>
+          <div class="quote-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.6 7-11.5A7 7 0 0 0 5 9.5C5 14.4 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+            H3 Building, 384 Hoàng Diêu, Phường Khánh Hội, Tp. Hồ Chí Minh
+          </div>
+          <div class="quote-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+            Thứ 2 – Thứ 7: 8:00 – 18:00
+          </div>
+        </div>
+      </div>
+
+      <div class="quote-form-wrap">
+        <h3>Thông Tin Đặt Báo Giá</h3>
+        <p>Vui lòng điền đầy đủ thông tin để chúng tôi hỗ trợ nhanh nhất.</p>
+
+        <form id="quoteForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Họ và tên *</label>
+              <input type="text" id="fullName" required placeholder="Nguyễn Văn A">
+            </div>
+            <div class="form-group">
+              <label for="phone">Số điện thoại *</label>
+              <input type="tel" id="phone" required placeholder="090 123 4567">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" required placeholder="ban@email.com">
+            </div>
+            <div class="form-group">
+              <label for="serviceType">Loại dịch vụ *</label>
+              <select id="serviceType" required>
+                <option value="" disabled selected>Chọn dịch vụ</option>
+                <option>Dịch thuật công chứng</option>
+                <option>Hợp pháp hóa lãnh sự</option>
+                <option>Dịch thuật chuyên ngành</option>
+                <option>Phiên dịch hội nghị</option>
+                <option>Dịch thuật doanh nghiệp</option>
+                <option>Bản địa hóa đa phương tiện</option>
+                <option>Khác</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="sourceLang">Ngôn ngữ nguồn</label>
+              <select id="sourceLang">
+                <option>Tiếng Việt</option>
+                <option>Tiếng Anh</option>
+                <option>Tiếng Trung</option>
+                <option>Tiếng Nhật</option>
+                <option>Tiếng Hàn</option>
+                <option>Tiếng Pháp</option>
+                <option>Tiếng Đức</option>
+                <option>Khác</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="targetLang">Ngôn ngữ đích</label>
+              <select id="targetLang">
+                <option>Tiếng Anh</option>
+                <option>Tiếng Việt</option>
+                <option>Tiếng Trung</option>
+                <option>Tiếng Nhật</option>
+                <option>Tiếng Hàn</option>
+                <option>Tiếng Pháp</option>
+                <option>Tiếng Đức</option>
+                <option>Khác</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="appointmentDate">Ngày hẹn mong muốn *</label>
+              <input type="date" id="appointmentDate" required>
+            </div>
+            <div class="form-group">
+              <label for="appointmentTime">Giờ hẹn</label>
+              <input type="time" id="appointmentTime" value="09:00">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Ghi chú thêm</label>
+            <textarea id="notes" placeholder="Mô tả loại tài liệu, số trang, hoặc yêu cầu đặc biệt..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-submit">
+            <span class="btn-text">
+              Gửi Yêu Cầu Báo Giá
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </span>
+            <span class="btn-spinner"></span>
+          </button>
+        </form>
+
+        <div class="form-success" id="formSuccess">
+          <div class="form-success-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>
+          </div>
+          <h3>Đã Gửi Yêu Cầu Thành Công!</h3>
+          <p>Cảm ơn quý khách. Đội ngũ VY VY đã nhận được yêu cầu và sẽ liên hệ trong vòng 30 phút.</p>
+          <span class="code" id="requestCode">VL00000000</span>
+          <div>
+            <button class="btn btn-outline" id="resetFormBtn" type="button">Gửi Yêu Cầu Khác</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="logo">
+          <span class="logo-mark">VY</span>
+          <span>
+            <span class="logo-word">VY VY</span>
+            <span class="logo-sub">Translation Bureau</span>
+          </span>
+        </a>
+        <p>Đơn vị dịch thuật công chứng và hợp pháp hóa lãnh sự uy tín, đồng hành cùng cá nhân và doanh nghiệp trên hành trình kết nối toàn cầu từ năm 2011.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Điện thoại"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.2c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2 2z"/></svg></a>
+          <a href="#" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6.5l9 6.5 9-6.5"/></svg></a>
+          <a href="#" aria-label="Nhắn tin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H8l-4 4V5z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Liên Kết</h5>
+        <ul>
+          <li><a href="#top">Trang chủ</a></li>
+          <li><a href="#services">Dịch vụ</a></li>
+          <li><a href="#languages">Ngôn ngữ</a></li>
+          <li><a href="#process">Quy trình</a></li>
+          <li><a href="#quote">Liên hệ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Dịch Vụ</h5>
+        <ul>
+          <li><a href="#services">Dịch thuật công chứng</a></li>
+          <li><a href="#services">Hợp pháp hóa lãnh sự</a></li>
+          <li><a href="#services">Dịch thuật chuyên ngành</a></li>
+          <li><a href="#services">Phiên dịch hội nghị</a></li>
+          <li><a href="#services">Dịch thuật doanh nghiệp</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Liên Hệ</h5>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.6 7-11.5A7 7 0 0 0 5 9.5C5 14.4 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+          <span>H3 Building, 384 Hoàng Diêu, Phường Khánh Hội, Tp. Hồ Chí Minh</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.2c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2 2z"/></svg>
+          <span>0911723887</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6.5l9 6.5 9-6.5"/></svg>
+          <span>nguyenthanhvy81@gmail.com</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span id="copyrightYear">© 2026 VY VY Translation Bureau. Đã đăng ký bản quyền.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Điều khoản</a>
+        <a href="#">Bảo mật</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ======================= FLOATING ACTIONS ======================= -->
+<div class="floating-actions">
+  <a href="tel:19006789" class="fab fab-call" aria-label="Gọi ngay">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.2c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2 2z"/></svg>
+  </a>
+  <button class="fab fab-top" id="backToTop" aria-label="Lên đầu trang">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+</div>
+
+<script>
+(function(){
+
+  /* ---------- Language data (shared by ticker + grid) ---------- */
+  var LANGS = [
+    { vi:"Tiếng Anh", native:"English", flag:"🇬🇧", note:"Hồ sơ du học, visa Mỹ, Anh, Úc, Canada và tài liệu doanh nghiệp quốc tế." },
+    { vi:"Tiếng Trung", native:"中文", flag:"🇨🇳", note:"Hồ sơ thương mại, đầu tư, hợp đồng với đối tác Trung Quốc, Đài Loan." },
+    { vi:"Tiếng Nhật", native:"日本語", flag:"🇯🇵", note:"Hồ sơ lao động, du học, kết hôn theo chuẩn Nhật Bản." },
+    { vi:"Tiếng Hàn", native:"한국어", flag:"🇰🇷", note:"Hồ sơ xuất khẩu lao động, du học, kết hôn với người Hàn Quốc." },
+    { vi:"Tiếng Pháp", native:"Français", flag:"🇫🇷", note:"Hồ sơ du học Pháp, Bỉ, Canada (Quebec) và khối Pháp ngữ." },
+    { vi:"Tiếng Đức", native:"Deutsch", flag:"🇩🇪", note:"Hồ sơ du học nghề, định cư, lao động tại Đức, Áo, Thụy Sĩ." },
+    { vi:"Tiếng Nga", native:"Русский", flag:"🇷🇺", note:"Hồ sơ hợp tác thương mại, lao động với Nga và các nước SNG." },
+    { vi:"Tiếng Tây Ban Nha", native:"Español", flag:"🇪🇸", note:"Hồ sơ Tây Ban Nha và các quốc gia khu vực Mỹ Latinh." },
+    { vi:"Tiếng Ý", native:"Italiano", flag:"🇮🇹", note:"Hồ sơ du học, định cư và giao thương tại Ý." },
+    { vi:"Tiếng Thái", native:"ภาษาไทย", flag:"🇹🇭", note:"Hồ sơ lao động, thương mại và đầu tư tại Thái Lan." },
+    { vi:"Tiếng Ả Rập", native:"العربية", flag:"🇸🇦", note:"Hồ sơ lao động, thương mại tại UAE, Ả Rập Xê Út, Qatar." },
+    { vi:"Tiếng Bồ Đào Nha", native:"Português", flag:"🇵🇹", note:"Hồ sơ Bồ Đào Nha, Brazil và cộng đồng nói tiếng Bồ." }
+  ];
+
+  /* Populate ticker (duplicated once for seamless loop) */
+  var tickerTrack = document.getElementById('tickerTrack');
+  if(tickerTrack){
+    var tickerHTML = '';
+    for(var r=0;r<2;r++){
+      LANGS.forEach(function(l){
+        tickerHTML += '<div class="ticker-item"><span class="flag">'+l.flag+'</span>'+l.vi+'</div>';
+      });
+    }
+    tickerTrack.innerHTML = tickerHTML;
+  }
+
+  /* Populate language grid */
+  var langGrid = document.getElementById('languagesGrid');
+  if(langGrid){
+    var gridHTML = '';
+    LANGS.forEach(function(l){
+      gridHTML += '<div class="lang-card fade-up"><div class="lang-flag-badge">'+l.flag+'</div><h4>'+l.vi+'</h4><span>'+l.native+'</span><p>'+l.note+'</p></div>';
+    });
+    langGrid.innerHTML = gridHTML;
+  }
+
+  /* ---------- Mobile menu ---------- */
+  var toggle = document.getElementById('mobileToggle');
+  var navLinks = document.getElementById('navLinks');
+  if(toggle && navLinks){
+    toggle.addEventListener('click', function(){
+      navLinks.classList.toggle('active');
+      toggle.classList.toggle('active');
+    });
+    navLinks.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        navLinks.classList.remove('active');
+        toggle.classList.remove('active');
+      });
+    });
+  }
+
+  /* ---------- Sticky header + back-to-top visibility ---------- */
+  var header = document.getElementById('siteHeader');
+  var backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 30){ header.classList.add('scrolled'); }
+    else { header.classList.remove('scrolled'); }
+
+    if(backToTop){
+      if(window.scrollY > 600){ backToTop.classList.add('visible'); }
+      else { backToTop.classList.remove('visible'); }
+    }
+  });
+  if(backToTop){
+    backToTop.addEventListener('click', function(){
+      window.scrollTo({ top:0, behavior:'smooth' });
+    });
+  }
+
+  /* ---------- Smooth scroll for in-page anchors ---------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href');
+      if(id.length > 1){
+        var target = document.querySelector(id);
+        if(target){
+          e.preventDefault();
+          var offset = 88;
+          var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top:top, behavior:'smooth' });
+        }
+      }
+    });
+  });
+
+  /* ---------- Scroll reveal (fade-up) ---------- */
+  var revealItems = document.querySelectorAll('.fade-up');
+  if('IntersectionObserver' in window){
+    var revealObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold:0.12, rootMargin:'0px 0px -40px 0px' });
+    revealItems.forEach(function(el, i){
+      el.style.transitionDelay = (Math.min(i % 6, 5) * 0.08) + 's';
+      revealObserver.observe(el);
+    });
+  } else {
+    revealItems.forEach(function(el){ el.classList.add('in-view'); });
+  }
+
+  /* ---------- Counter animation for hero stats ---------- */
+  var counters = document.querySelectorAll('.stat-number');
+  if('IntersectionObserver' in window && counters.length){
+    var counterObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          var el = entry.target;
+          var target = parseInt(el.getAttribute('data-target'), 10) || 0;
+          var suffix = el.getAttribute('data-suffix') || '';
+          var duration = 1600;
+          var startTime = null;
+          function step(ts){
+            if(!startTime) startTime = ts;
+            var progress = Math.min((ts - startTime) / duration, 1);
+            var eased = 1 - Math.pow(1 - progress, 3);
+            var current = Math.floor(eased * target);
+            el.textContent = current.toLocaleString('vi-VN') + suffix;
+            if(progress < 1){ requestAnimationFrame(step); }
+            else { el.textContent = target.toLocaleString('vi-VN') + suffix; }
+          }
+          requestAnimationFrame(step);
+          counterObserver.unobserve(el);
+        }
+      });
+    }, { threshold:0.6 });
+    counters.forEach(function(el){ counterObserver.observe(el); });
+  }
+
+  /* ---------- Date input: block past dates ---------- */
+  var dateInput = document.getElementById('appointmentDate');
+  if(dateInput){
+    var today = new Date();
+    var yyyy = today.getFullYear();
+    var mm = String(today.getMonth()+1).padStart(2,'0');
+    var dd = String(today.getDate()).padStart(2,'0');
+    dateInput.setAttribute('min', yyyy+'-'+mm+'-'+dd);
+  }
+
+  /* ---------- Quote form submit ---------- */
+  var quoteForm = document.getElementById('quoteForm');
+  var formSuccess = document.getElementById('formSuccess');
+  var requestCode = document.getElementById('requestCode');
+  var resetBtn = document.getElementById('resetFormBtn');
+
+  if(quoteForm){
+    quoteForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var submitBtn = quoteForm.querySelector('.btn-submit');
+      submitBtn.classList.add('loading');
+      submitBtn.disabled = true;
+
+      setTimeout(function(){
+        submitBtn.classList.remove('loading');
+        submitBtn.disabled = false;
+        quoteForm.style.display = 'none';
+        if(formSuccess){
+          formSuccess.classList.add('active');
+          if(requestCode){
+            var code = 'VL' + Date.now().toString().slice(-8);
+            requestCode.textContent = code;
+          }
+        }
+      }, 1100);
+    });
+  }
+
+  if(resetBtn){
+    resetBtn.addEventListener('click', function(){
+      quoteForm.reset();
+      quoteForm.style.display = 'block';
+      formSuccess.classList.remove('active');
+      if(dateInput){ dateInput.setAttribute('min', dateInput.getAttribute('min')); }
+    });
+  }
+
+  /* ---------- Footer year ---------- */
+  var copyrightYear = document.getElementById('copyrightYear');
+  if(copyrightYear){
+    var yr = new Date().getFullYear();
+    copyrightYear.textContent = '© ' + yr + ' VY VY Translation Bureau. Đã đăng ký bản quyền.';
+  }
+
+})();
+</script>
+</body>
+</html>
